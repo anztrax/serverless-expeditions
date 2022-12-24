@@ -5,7 +5,7 @@ resource "google_cloudfunctions_function" "function" {
   runtime     = "python37"
   region      = var.region
 
-  available_memory_mb   = 128
+  available_memory_mb   = 256
   source_archive_bucket = google_storage_bucket.source.name
   source_archive_object = google_storage_bucket_object.archive.name
   trigger_http          = true
